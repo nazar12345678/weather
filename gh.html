@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Времена года</title>
+</head>
+<body>
+<img src="zima.jpg" id="1" width="250"></img>
+<audio id="2"></audio>
+</body>
+<script>
+    zvuk=1
+    number=1
+    timer = setInterval(time, 3000)
+    function time() {
+        number=number+1
+        if(number>4)
+            number=1
+        if(number == 1){
+            document.getElementById('1').src = 'zima.jpg'
+            document.getElementById('2').src = 'Neizvesten-Zvuk-v_yugi (mp3cut.net).mp3'
+        }if(number == 2){
+            document.getElementById('1').src = 'vesna.jpg'
+            document.getElementById('2').src = 'zvuki_prirodi_penie_ptic_-_03_-_u_vodi_(zf (mp3cut.net).mp3'
+        }if(number == 3){
+            document.getElementById('1').src = 'leto.jpg'
+            document.getElementById('2').src = '00199 (mp3cut.net).mp3'
+        }if(number == 4){
+            document.getElementById('1').src = 'osen.jpg'
+            document.getElementById('2').src = 'Sound_17947 (mp3cut.net).mp3'
+        }
+        document.getElementById('2').play()
+    }
+</script>
+</html>
